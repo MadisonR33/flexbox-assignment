@@ -1,2 +1,113 @@
-html,body{background:#d5d5d5;font-family:sans-serif;padding:1em;color:#414141;height:100%}nav a{text-decoration:none;color:#414141}.hero{background:white;padding:2em;margin:1em 0;min-height:400px}.hero-content{display:-webkit-box;display:-ms-flexbox;display:flex}.main-container{background:#eee;padding:2em;margin:1em 0}.mixed-layout{background:white;padding:2em;margin:1em 0}.second-a{background:tomato;color:white;padding:2em}.second-b{background:navy;color:white;padding:2em}
-/*# sourceMappingURL=main.css.map */
+html, body {
+  background: rgb(213, 213, 213);
+  font-family: sans-serif;
+  padding: 1em;
+  color: #414141;
+  height: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #414141;
+}
+
+.hero {
+  background: white;
+  padding: 2em;
+  margin: 1em 0;
+  min-height: 400px;
+}
+
+.hero-content {
+  display: flex;
+}
+
+.main-container {
+  background: rgb(238, 238, 238);
+  padding: 2em;
+  margin: 1em 0;
+}
+
+.mixed-layout {
+  background: white;
+  padding: 2em;
+  margin: 1em 0;
+}
+
+.second-a {
+  background: tomato;
+  color: white;
+  padding: 2em;
+}
+
+.second-b {
+  background: navy;
+  color: white;
+  padding: 2em;
+}
+
+/* =========================
+   BASE / MOBILE FIRST
+   ========================= */
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: white;
+  padding: 1rem;
+}
+
+/* =========================
+   DESKTOP (1024px+)
+   ========================= */
+@media (min-width: 1024px) {
+  /* BIG TITLE */
+  h1 {
+    font-size: 4em;
+  }
+  /* POST + SIDEBAR */
+  .main-container {
+    display: flex;
+    gap: 2rem;
+  }
+  .post,
+  .sidebar {
+    flex: 1;
+  }
+  /* MIXED LAYOUT */
+  .mixed-layout {
+    display: flex;
+    gap: 2rem;
+  }
+  .first,
+  .second {
+    flex: 1;
+  }
+  /* A + B */
+  .second {
+    display: flex;
+  }
+  .second-a,
+  .second-b {
+    flex: 1;
+  }
+}/*# sourceMappingURL=main.css.map */
